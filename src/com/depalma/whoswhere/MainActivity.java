@@ -40,7 +40,7 @@ public class MainActivity extends ActionBarActivity {
                     }
                 }
             }
-        }
+        }          
         return 1;
     }
 
@@ -56,7 +56,7 @@ public class MainActivity extends ActionBarActivity {
         super.onCreate(savedInstanceState);
 
         if(hasGoogleMaps()) {
-            setContentView(R.layout.activity_main);
+            setContentView(R.layout.signup_page);
         } else {
             Toast.makeText(this, R.string.no_maps, Toast.LENGTH_LONG).show();
             finish();

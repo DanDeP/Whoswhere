@@ -7,8 +7,14 @@
     <string name="no_maps">Google Maps is not available on your device.</string>
     <string name="action_location_found"></string>
     <string name="neither">Neither</string>
+
     <string-array name="settings_menu">
         <item>About Us</item>
         <item>Logout</item>
     </string-array>
+    <string-array name="gender">
+        <item>Male</item>
+        <item>Female</item>
+    </string-array>
+
 </resources>

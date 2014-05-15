@@ -1,109 +1,129 @@
 <?xml version="1.0" encoding="utf-8"?>
-
-<RelativeLayout
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
-    xmlns:android="http://schemas.android.com/apk/res/android">
+    android:layout_height="fill_parent" >
 
-    <!--<fragment xmlns:android="http://schemas.android.com/apk/res/android"
+    <!--
+        <fragment xmlns:android="http://schemas.android.com/apk/res/android"
         android:id="@+id/map"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:name="com.google.android.gms.maps.MainFragment"
-        />-->
-    <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+        />
+    -->
+
+    <fragment
         android:id="@+id/map"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        class="com.google.android.gms.maps.SupportMapFragment" />
+        class="com.google.android.gms.maps.MapFragment" />
 
     <LinearLayout
-        android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_alignParentTop="true"
-        android:layout_alignParentLeft="true"
-        android:layout_marginLeft="300dp"
+        android:layout_marginLeft="270dp"
         android:background="#abb3a3"
-        android:measureWithLargestChild="false" >
+        android:measureWithLargestChild="false"
+        android:orientation="vertical" >
 
         <View
             android:layout_width="fill_parent"
             android:layout_height="1dp"
-            android:background="@android:color/black"/>
+            android:background="@android:color/black" />
 
-      <!--  <ImageView
+        <!--
+            <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@drawable/ic_action_unlocked_features"
             android:layout_marginLeft="10dip"
             android:layout_marginRight="10dip"
-            android:id="@+id/unlocked"/>-->
-        <CheckBox
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:button="@android:drawable/btn_star"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentRight="true"
-            android:layout_marginTop="25dp"
-            android:layout_marginLeft="10dip"
-            android:layout_marginRight="10dip"
-            android:alpha="1"/>
+            android:id="@+id/unlocked"/>
+        -->
 
         <CheckBox
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
             android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
             android:layout_marginLeft="10dip"
             android:layout_marginRight="10dip"
-            android:button="@drawable/promo_selector"
-            android:alpha="1"/>
+            android:layout_marginTop="25dp"
+            android:alpha="1"
+            android:button="@android:drawable/btn_star" />
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="10dip"
+            android:layout_marginRight="10dip"
+            android:alpha="1"
+            android:button="@drawable/promo_selector" />
+
         <View
             android:layout_width="fill_parent"
             android:layout_height="1dp"
-            android:background="@android:color/black"/>
-      <!--  <ImageView
+            android:background="@android:color/black" />
+        <!--
+            <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@drawable/ic_action_locked_features"
             android:layout_marginLeft="10dip"
             android:layout_marginRight="10dip"
-            android:id="@+id/locked"/>-->
+            android:id="@+id/locked"/>
+        -->
 
-        <RadioGroup android:layout_width="wrap_content"
+        <RadioGroup
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:checkedButton="@+id/third">
-            <RadioButton android:id="@+id/first"
+            android:checkedButton="@+id/third"
+            android:orientation="vertical" >
+
+            <RadioButton
+                android:id="@+id/first"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dip"
                 android:layout_marginRight="10dip"
-                android:button="@drawable/gender_guy_ratios"/>
-            <RadioButton android:id="@+id/second"
+                android:button="@drawable/gender_guy_ratios" />
+
+            <RadioButton
+                android:id="@+id/second"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dip"
                 android:layout_marginRight="10dip"
-                android:button="@drawable/gender_girl_ratios"/>
-         <!--   <RadioButton android:id="@+id/third"
+                android:button="@drawable/gender_girl_ratios" />
+
+           <!--  <RadioButton
+                android:id="@+id/neither"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Neither" /> -->
+            <!--
+                <RadioButton android:id="@+id/third"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dip"
                 android:layout_marginRight="10dip"
                 android:text="Neither"
-                android:button="@string/neither"/>-->
+                android:button="@string/neither"/>
+            -->
         </RadioGroup>
-
     </LinearLayout>
 
-    <!-- <Button
+    <!--
+         <Button
          android:layout_width="wrap_content"
          android:layout_height="wrap_content"
          android:text="New Button"
          android:id="@+id/button"
          android:layout_alignParentBottom="true"
-         android:layout_alignParentRight="true" />-->
+         android:layout_alignParentRight="true" />
+    -->
 
 </RelativeLayout>
