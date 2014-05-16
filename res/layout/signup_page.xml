@@ -53,4 +53,31 @@
         android:layout_alignParentRight="true"
         android:layout_alignTop="@+id/gender" />
 
+    <TextView
+        android:id="@+id/dateOfBirth"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/gender"
+        android:layout_below="@+id/genderSpinner"
+        android:text="Date of Birth:" />
+
+    <Button
+        android:id="@+id/join"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/dateOfBirth"
+        android:layout_below="@+id/dateOfBirth"
+        android:layout_marginTop="20dp"
+        android:onClick="joinClick"
+        android:text="Join" />
+
+    <EditText
+        android:id="@+id/editText1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/genderSpinner"
+        android:layout_below="@+id/genderSpinner"
+        android:ems="10"
+        android:inputType="number" />
+
 </RelativeLayout>

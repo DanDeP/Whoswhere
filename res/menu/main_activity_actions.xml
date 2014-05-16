@@ -16,9 +16,12 @@
         
         app:showAsAction="always">
         <menu>
-            <item android:title="Business Inquiries"/>
-            <item android:title="About Us"/>
-            <item android:title="Log Out"/>
+            <item android:title="Business Inquiries"
+                android:id="@+id/businessInquiries"/>
+            <item android:title="About Us"
+                  android:id="@+id/aboutUs"/>
+            <item android:title="Deregister"
+                android:id="@+id/deregister"/>
         </menu>
     </item>
 
