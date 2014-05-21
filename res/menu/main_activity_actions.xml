@@ -16,7 +16,7 @@
         
         app:showAsAction="always">
         <menu>
-            <item android:title="Business Inquiries"
+            <item android:title="Update Bars/Business Inquiries"
                 android:id="@+id/businessInquiries"/>
             <item android:title="About Us"
                   android:id="@+id/aboutUs"/>
