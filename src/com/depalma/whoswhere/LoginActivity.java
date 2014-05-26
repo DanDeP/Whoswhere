@@ -1,17 +1,15 @@
 package com.depalma.whoswhere;
 
-import java.util.ArrayList;
-import java.util.Calendar;
-
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v7.app.ActionBarActivity;
 import android.view.View;
-import android.view.Window;
 import android.widget.ArrayAdapter;
 import android.widget.Spinner;
+
+import com.depalma.whoswhere.shared.Gender;
+import com.depalma.whoswhere.shared.messages.JoinMessage;
 
 public class LoginActivity extends Activity {
 
@@ -38,7 +36,9 @@ public class LoginActivity extends Activity {
 	public void joinClick(View view) 
 	{
 	    Intent intent = new Intent(LoginActivity.this, MainActivity.class);
-	    startActivity(intent);
+	    JoinMessage join = new JoinMessage("name", Gender.Male, 22);
+	    Communicator.getCommunicator().send(join);
+	    //startActivity(intent);
 	}
 
 }
