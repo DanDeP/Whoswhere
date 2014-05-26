@@ -1,4 +1,4 @@
-package com.depalma.whoswhere;
+package com.depalma.whoswhere.activities;
 
 import java.io.IOException;
 import java.net.Socket;
@@ -21,6 +21,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Toast;
 
+import com.depalma.whoswhere.R;
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.GooglePlayServicesClient;
 import com.google.android.gms.common.GooglePlayServicesUtil;
@@ -177,7 +178,7 @@ public class MainActivity extends ActionBarActivity implements
 				.icon(BitmapDescriptorFactory
 						.defaultMarker(BitmapDescriptorFactory.HUE_CYAN)));
 
-		//Communicator.getCommunicator().
+		// Communicator.getCommunicator().
 	}
 
 	public boolean pnpoly(ArrayList<LatLng> building, LatLng check) {
@@ -234,12 +235,12 @@ public class MainActivity extends ActionBarActivity implements
 				pnpoly(mohawk, yourMapLocation) ? "We are within" : "Nope",
 				Toast.LENGTH_LONG).show();
 	}
-	
+
 	public static String SERVERIP = "10.128.12.55";
 	public static final int SERVERPORT = 43599;
-	
-	public void Connected(View view){
-		
+
+	public void Connected(View view) {
+
 	}
 
 }

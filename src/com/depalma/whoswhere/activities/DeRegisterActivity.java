@@ -1,4 +1,7 @@
-package com.depalma.whoswhere;
+package com.depalma.whoswhere.activities;
+
+import com.depalma.whoswhere.R;
+import com.depalma.whoswhere.R.layout;
 
 import android.app.Activity;
 import android.content.Context;

@@ -1,4 +1,4 @@
-package com.depalma.whoswhere;
+package com.depalma.whoswhere.activities;
 
 import android.app.Activity;
 import android.content.Context;
@@ -8,6 +8,11 @@ import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Spinner;
 
+import com.depalma.whoswhere.Communicator;
+import com.depalma.whoswhere.R;
+import com.depalma.whoswhere.R.array;
+import com.depalma.whoswhere.R.id;
+import com.depalma.whoswhere.R.layout;
 import com.depalma.whoswhere.shared.Gender;
 import com.depalma.whoswhere.shared.messages.JoinMessage;
 
@@ -37,7 +42,7 @@ public class LoginActivity extends Activity {
 	{
 	    Intent intent = new Intent(LoginActivity.this, MainActivity.class);
 	    JoinMessage join = new JoinMessage("name", Gender.Male, 22);
-	    Communicator.getCommunicator().send(join);
+	    Communicator.getCommunicator().queueMessage(join);
 	    //startActivity(intent);
 	}
 

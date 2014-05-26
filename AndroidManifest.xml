@@ -27,7 +27,7 @@
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
         <activity
-            android:name="com.depalma.whoswhere.LoginActivity"
+            android:name="com.depalma.whoswhere.activities.LoginActivity"
             android:label="@string/app_name"
             android:theme="@android:style/Theme.NoTitleBar" >
             <intent-filter>
@@ -36,18 +36,18 @@
             </intent-filter>
         </activity>
  <activity
-      android:name=".MainActivity"
+      android:name="com.depalma.whoswhere.activities.MainActivity"
       android:label="@string/app_name">          
  </activity> <activity
-      android:name=".AboutUsActivity"
+      android:name="com.depalma.whoswhere.activities.AboutUsActivity"
       android:label="@string/app_name">          
  </activity>
   <activity
-      android:name=".DeRegisterActivity"
+      android:name="com.depalma.whoswhere.activities.DeRegisterActivity"
       android:label="@string/app_name">          
  </activity>
-   <activity
-      android:name=".UpdateBarsActivity"
+  <activity
+      android:name="com.depalma.whoswhere.activities.UpdateBarsActivity"
       android:label="@string/app_name">          
  </activity>
         <meta-data
