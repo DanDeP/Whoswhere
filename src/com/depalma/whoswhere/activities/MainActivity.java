@@ -13,12 +13,14 @@ import android.location.Location;
 import android.os.Bundle;
 import android.os.Looper;
 import android.support.v4.view.ViewPager;
+import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ListView;
 import android.widget.Toast;
 
 import com.depalma.whoswhere.R;
@@ -46,6 +48,7 @@ public class MainActivity extends ActionBarActivity implements
 	Double currentLongitude;
 	Double currentLatitude;
 	GoogleMap map;
+
 
 	private static int getVersionFromPackageManager(Context context) {
 		PackageManager packageManager = context.getPackageManager();
@@ -91,6 +94,9 @@ public class MainActivity extends ActionBarActivity implements
 		final ActionBar actionBar = getSupportActionBar();
 		actionBar.setNavigationMode(ActionBar.NAVIGATION_MODE_STANDARD);
 
+		
+		
+		
 		myLocationClient = new LocationClient(this, this, this);
 
 		// Get a handle to the Map Fragment
@@ -235,12 +241,24 @@ public class MainActivity extends ActionBarActivity implements
 				pnpoly(mohawk, yourMapLocation) ? "We are within" : "Nope",
 				Toast.LENGTH_LONG).show();
 	}
+	
+	public void myLocation(View view){
+		myCurrentLocation = myLocationClient.getLastLocation();
+		currentLongitude = myCurrentLocation.getLongitude();
+		currentLatitude = myCurrentLocation.getLatitude();
+
+		LatLng yourMapLocation = new LatLng(currentLatitude, currentLongitude);
+
+		map.moveCamera(CameraUpdateFactory.newLatLngZoom(yourMapLocation,
+				ZOOM_LEVEL));
+
+		map.addMarker(new MarkerOptions().position(
+				new LatLng(currentLatitude, currentLongitude)).title(
+				"You are here!"));
+	}
 
 	public static String SERVERIP = "10.128.12.55";
 	public static final int SERVERPORT = 43599;
 
-	public void Connected(View view) {
-
-	}
 
 }

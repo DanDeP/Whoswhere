@@ -2,39 +2,13 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical" >
+    android:orientation="vertical"
+    android:background="@drawable/background_bluegreen" >
 
     <TextView
         android:id="@+id/signUp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="22dp"
-        android:text="Sign Up"
-        android:textAppearance="?android:attr/textAppearanceMedium" />
-
-    <TextView
-        android:id="@+id/labelUsername"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_below="@+id/signUp"
-        android:layout_marginLeft="33dp"
-        android:layout_marginTop="26dp"
-        android:text="Username:" />
-
-    <EditText
-        android:id="@+id/editUsername"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/labelUsername"
-        android:layout_alignBottom="@+id/labelUsername"
-        android:layout_alignLeft="@+id/signUp"
-        android:ems="10" >
-
-        <requestFocus />
-    </EditText>
+        style="@style/signUp"
+        android:text="@string/SignUp"/>
 
     <TextView
         android:id="@+id/gender"
@@ -43,7 +17,8 @@
         android:layout_alignRight="@+id/labelUsername"
         android:layout_below="@+id/editUsername"
         android:layout_marginTop="30dp"
-        android:text="Gender:" />
+        android:text="Gender:"
+        android:textColor="#000000" />
 
     <Spinner
         android:id="@+id/genderSpinner"
@@ -59,17 +34,8 @@
         android:layout_height="wrap_content"
         android:layout_alignRight="@+id/gender"
         android:layout_below="@+id/genderSpinner"
-        android:text="Date of Birth:" />
-
-    <Button
-        android:id="@+id/join"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignRight="@+id/dateOfBirth"
-        android:layout_below="@+id/dateOfBirth"
-        android:layout_marginTop="20dp"
-        android:onClick="joinClick"
-        android:text="Join" />
+        android:text="Date of Birth:"
+        android:textColor="#000000" />
 
     <EditText
         android:id="@+id/dobPicker"
@@ -78,6 +44,60 @@
         android:layout_alignLeft="@+id/genderSpinner"
         android:layout_below="@+id/genderSpinner"
         android:ems="10"
-        android:inputType="number" />
+        android:inputType="number"
+        android:textColor="#111" />
+
+    <TextView
+        android:id="@+id/labelUsername"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/signUp"
+        android:layout_marginLeft="21dp"
+        android:layout_marginTop="28dp"
+        android:text="Username:"
+        android:textColor="#000000" /> 
+
+    <EditText
+        android:id="@+id/editUsername"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/labelUsername"
+        android:layout_alignBottom="@+id/labelUsername"
+        android:layout_alignParentRight="true"
+        android:ems="10"
+        android:textColor="#111" >       
+    </EditText>
+
+    <TextView
+        android:id="@+id/slogan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/join"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="91dp"
+        android:gravity="center_horizontal"
+        android:text="Find out who is where all anonymously!"
+        android:textColor="#000000" />
+
+    <Button
+        android:id="@+id/join"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/dobPicker"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="45dp"
+        android:gravity="center_horizontal"
+        android:onClick="joinClick"
+        android:text="Join" />
+
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/join"
+        android:layout_below="@+id/join"
+        android:layout_marginTop="14dp"
+        android:src="@drawable/glass_bordeaux" />
 
 </RelativeLayout>

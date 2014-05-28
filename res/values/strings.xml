@@ -17,4 +17,5 @@
         <item>Female</item>
     </string-array>
 	<string name="AboutUs">Test</string>
+	<string name="SignUp">Sign Up</string>
 </resources>

@@ -23,11 +23,11 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@drawable/ic_whoswhere"
+        android:icon="@drawable/glass_bordeaux"
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
         <activity
-            android:name="com.depalma.whoswhere.activities.LoginActivity"
+            android:name="com.depalma.whoswhere.activities.LoadingActivity"
             android:label="@string/app_name"
             android:theme="@android:style/Theme.NoTitleBar" >
             <intent-filter>
@@ -37,6 +37,10 @@
         </activity>
  <activity
       android:name="com.depalma.whoswhere.activities.MainActivity"
+      android:label="@string/app_name">          
+ </activity>
+  <activity
+      android:name="com.depalma.whoswhere.activities.LoginActivity"
       android:label="@string/app_name">          
  </activity> <activity
       android:name="com.depalma.whoswhere.activities.AboutUsActivity"

@@ -82,23 +82,13 @@
         
     </LinearLayout>-->
 
-    <!--
-         <Button
-         android:layout_width="wrap_content"
-         android:layout_height="wrap_content"
-         android:text="New Button"
-         android:id="@+id/button"
-         android:layout_alignParentBottom="true"
-         android:layout_alignParentRight="true" />
-    -->
-
     <Button
-        android:id="@+id/connection"
+        android:id="@+id/location"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_alignParentRight="true"
-        android:onClick="connected"
-        android:text="Connection" />
+        android:onClick="myLocation"
+        android:text="location" />
 
 </RelativeLayout>

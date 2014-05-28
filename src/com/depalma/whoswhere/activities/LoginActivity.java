@@ -41,9 +41,9 @@ public class LoginActivity extends Activity {
 	public void joinClick(View view) 
 	{
 	    Intent intent = new Intent(LoginActivity.this, MainActivity.class);
-	    JoinMessage join = new JoinMessage("name", Gender.Male, 22);
-	    Communicator.getCommunicator().queueMessage(join);
-	    //startActivity(intent);
+	    //JoinMessage join = new JoinMessage("name", Gender.Male, 22);
+	    //Communicator.getCommunicator().queueMessage(join);
+	    startActivity(intent);
 	}
 
 }
